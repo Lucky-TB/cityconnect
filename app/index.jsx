@@ -14,7 +14,7 @@ export default function App() {
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 16 }} scrollEnabled={ false }>
         <View style={{ width: '100%', alignItems: 'center', minHeight: screenHeight * 0.95 }}>
 
-          <View style={{ marginTop: 45 }}>
+          <View style={{ marginTop: 95 }}>
               <Text className="text-3xl font-psemibold" style={{ color: '#90EE90' }}>CityConnect</Text>
           </View>
 

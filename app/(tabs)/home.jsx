@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, FlatList, StyleSheet, Modal } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, StyleSheet, Modal, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const announcementsData = [
@@ -10,7 +10,6 @@ const announcementsData = [
 
 const Home = () => {
   const navigation = useNavigation();
-  const [isTransitModalVisible, setTransitModalVisible] = useState(false);
   const [isResourcesModalVisible, setResourcesModalVisible] = useState(false);
   const [isEcoTipsModalVisible, setEcoTipsModalVisible] = useState(false);
 
@@ -29,9 +28,9 @@ const Home = () => {
       <View style={styles.navigationContainer}>
         <TouchableOpacity 
           style={styles.navButton} 
-          onPress={() => setTransitModalVisible(true)}
+          onPress={() => navigation.navigate("citybuddy", { showModal: true })}
         >
-          <Text style={styles.navButtonText}>Transit</Text>
+          <Text style={styles.navButtonText}>What Goes Where?</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -56,23 +55,6 @@ const Home = () => {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.announcementsList}
       />
-
-      {/* Transit Modal */}
-      <Modal
-        visible={isTransitModalVisible}
-        transparent={true}
-        animationType="slide"
-        onRequestClose={() => setTransitModalVisible(false)}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalText}>A</Text>
-            <TouchableOpacity onPress={() => setTransitModalVisible(false)}>
-              <Text style={styles.modalClose}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
 
       {/* Resources Modal */}
       <Modal
