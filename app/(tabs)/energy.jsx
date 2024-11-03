@@ -1,8 +1,7 @@
-// energy.jsx
-
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Share } from 'react-native';
+
 const tipsData = [
   // Heating Tips
   { id: '1', category: 'Heating', tip: 'Lower your thermostat by 1 degree to save energy.' },

@@ -13,11 +13,10 @@ export default function App() {
     <SafeAreaView style={{ flex: 1, backgroundColor: '#161622' }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 16 }} scrollEnabled={ false }>
         <View style={{ width: '100%', alignItems: 'center', minHeight: screenHeight * 0.95 }}>
-          <Image 
-            source={images.logo}
-            style={{ width: screenWidth * 0.85, height: screenHeight * 0.1, marginTop: 30 }}
-            resizeMode="contain"
-          />
+
+          <View style={{ marginTop: 45 }}>
+              <Text className="text-3xl font-psemibold" style={{ color: '#90EE90' }}>CityConnect</Text>
+          </View>
 
           <Image 
             source={images.cards}
@@ -27,13 +26,13 @@ export default function App() {
 
           <View style={{ marginTop: 20 }}>
             <Text style={{ fontSize: screenHeight * 0.03, color: 'white', fontWeight: 'bold', textAlign: 'center', lineHeight: 30 }}>
-              Revolutionize Sustainable Farming Practices with {' '}
-              <Text style={{ color: '#90EE90' }}>GreenGrowAI</Text>
+              Enhance Sustainable Urban Living with {' '}
+              <Text style={{ color: '#90EE90' }}>CityConnect</Text>
             </Text>
           </View>
 
           <Text style={{ fontSize: screenHeight * 0.018, color: '#D3D3D3', textAlign: 'center', marginTop: 25, lineHeight: screenHeight * 0.025 }}>
-            Where Agriculture Meets Innovation: Embark on a Journey of Limitless Growth with GreenGrowAI
+            Where Community Meets Innovation: Discover Boundless Possibilities with CityConnect
           </Text>
 
         
